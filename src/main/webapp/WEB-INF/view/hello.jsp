@@ -1,3 +1,6 @@
+<%@page contentType="text/html" pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -5,6 +8,12 @@
     <title>Document</title>
 </head>
 <body>
-    hello hrllo form jsp
+    hello form jsp
+    <h1>
+        ${bo}
+    </h1>
+    <h1>
+        ${bohocit}
+    </h1>
 </body>
 </html>
