@@ -83,7 +83,7 @@
                                   style="top: 10px; left: 10px;">Laptop</div>
                                 <div class="p-4 border border-secondary border-top-0 rounded-bottom">
                                   <h4 style="font-size: 15px;">
-                                    <a href="/product/${product.id}">
+                                    <a href="/product/view/${product.id}">
                                       ${product.name}
                                     </a>
                                   </h4>
@@ -95,7 +95,7 @@
                                     </p>
                                     <form method="post" action="/add-product-to-cart/${product.id}">
                                       <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}" />
-                                      <button
+                                      <button type="submit"
                                         class="mx-auto btn border border-secondary rounded-pill px-3 text-primary">
                                         <i class="fa fa-shopping-bag me-2 text-primary"></i>
                                         Add to cart

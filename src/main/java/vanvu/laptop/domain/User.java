@@ -7,12 +7,14 @@ import jakarta.persistence.Id;
 import jakarta.persistence.JoinColumn;
 import jakarta.persistence.ManyToOne;
 import jakarta.persistence.OneToMany;
+import jakarta.persistence.OneToOne;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Table;
 import jakarta.validation.constraints.Email;
-import jakarta.validation.constraints.Min;
 import jakarta.validation.constraints.NotNull;
+import jakarta.validation.constraints.Size;
+import vanvu.laptop.service.validator.StrongPassword;
 @Entity
 @Table(name = "users")
 public class User {
@@ -27,11 +29,12 @@ public class User {
     private String email;
 
     @NotNull
-    @Min(value = 2, message = "Mật khẩu phải ít nhất 2 ký tự")
+    @Size(min = 6, message = "Mật khâu phải lớn hơn 6 ký tự")
+    @StrongPassword(message = "Mật khẩu phải có ít nhất 8 ký tự, bao gồm chữ hoa, chữ thường, số và ký tự đặc biệt")    
     private String password;
 
     @NotNull
-    @Min(value = 2, message = "Họ tên phải ít nhất 2 ký tự")
+    @Size(min = 2, message = "Họ tên phải lớn hơn 2 ký tự")
     private String fullName;
 
 
@@ -45,6 +48,17 @@ public class User {
 
     @OneToMany(mappedBy = "user")
     private List<Order> orders;
+
+    @OneToOne(mappedBy = "user")
+    private Cart cart;
+    
+    public Cart getCart() {
+        return cart;
+    }
+
+    public void setCart(Cart cart) {
+        this.cart = cart;
+    }
 
     public User() {
 

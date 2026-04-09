@@ -37,7 +37,7 @@
         <div id="spinner"
           class="show w-100 vh-100 bg-white position-fixed translate-middle top-50 start-50  d-flex align-items-center justify-content-center">
           <div class="spinner-grow text-primary" role="status"></div>
-        </div>
+        </div>  
         <!-- Spinner End -->
 
 
@@ -65,14 +65,14 @@
 
 
         <!-- Single Page Header start -->
-        <div class="container-fluid page-header py-5">
+        <!-- <div class="container-fluid page-header py-5">
           <h1 class="text-center text-white display-6">Shop Detail</h1>
           <ol class="breadcrumb justify-content-center mb-0">
             <li class="breadcrumb-item"><a href="#">Home</a></li>
             <li class="breadcrumb-item"><a href="#">Pages</a></li>
             <li class="breadcrumb-item active text-white">Shop Detail</li>
           </ol>
-        </div>
+        </div> -->
         <!-- Single Page Header End -->
 
 
@@ -83,7 +83,7 @@
               <div>
                 <nav aria-label="breadcrumb">
                   <ol class="breadcrumb">
-                    <li class="breadcrumb-item"><a href="/">Home</a></li>
+                    <li class="breadcrumb-item"><a href="/">Home</a></li> 
                     <li class="breadcrumb-item active" aria-current="page">Chi tiết sản phẩm</li>
                   </ol>
                 </nav>
@@ -125,8 +125,9 @@
                         </button>
                       </div>
                     </div>
-                    <a href="#" class="btn border border-secondary rounded-pill px-4 py-2 mb-4 text-primary"><i
-                        class="fa fa-shopping-bag me-2 text-primary"></i> Add to cart</a>
+                    <a href="#" class="btn border border-secondary rounded-pill px-4 py-2 mb-4 text-primary">
+                      <i class="fa fa-shopping-bag me-2 text-primary"></i> Add to cart 
+                    </a>
                   </div>
                   <div class="col-lg-12">
                     <nav>
@@ -141,10 +142,8 @@
                         <p style="text-align: justify;">${product.detailDesc}
                         </p>
                       </div>
-
                     </div>
                   </div>
-
                 </div>
               </div>
               <div class="col-lg-4 col-xl-3">

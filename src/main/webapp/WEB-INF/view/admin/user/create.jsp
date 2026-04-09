@@ -53,7 +53,7 @@
                                 <div class="row mb-3">
                                     <div class="col-md-6">
                                         <c:set var="errors">
-                                            <form:errors path="password" cssClass="invalid-feedback" /> 
+                                            <form:errors path="email" cssClass="invalid-feedback" /> 
                                         </c:set>
                                         <label for="email" class="form-label">Email</label>
                                         <form:input type="email" class="form-control ${not empty errors ? 'is-invalid' : ''}" path="email"/>
@@ -78,7 +78,7 @@
                                 
                                     <div class="col-md-6">
                                         <c:set var="errors">
-                                            <form:errors path="password" cssClass="invalid-feedback" /> 
+                                            <form:errors path="fullName" cssClass="invalid-feedback" /> 
                                         </c:set>
                                         <label for="fullname" class="form-label">Full Name</label>
                                         <form:input type="text" class="form-control ${not empty errors ? 'is-invalid' : ''}" path="fullName"/>

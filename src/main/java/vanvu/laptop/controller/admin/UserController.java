@@ -18,7 +18,6 @@ import vanvu.laptop.service.UserService;
 
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.validation.BindingResult;
-import org.springframework.validation.FieldError;
 @Controller
 public class UserController {
 
@@ -56,11 +55,6 @@ public class UserController {
             @RequestParam("file") MultipartFile file
         ) {
 
-        List<FieldError> errors = newUserBindingResult.getFieldErrors();
-        for(FieldError error : errors) {
-          System.out.println(">>>>" + error.getField() + ": " + error.getDefaultMessage());
-        }
-
         if(newUserBindingResult.hasErrors()) {
             return "admin/user/create";
         }
@@ -73,7 +67,7 @@ public class UserController {
         if (user.getRole() != null && user.getRole().getName() != null) {
             user.setRole(this.userService.getRoleByName(user.getRole().getName()));
         } else {
-            user.setRole(this.userService.getRoleByName("User"));
+            user.setRole(this.userService.getRoleByName("USER"));
         }
 
         this.userService.handleSaveUser(user);
